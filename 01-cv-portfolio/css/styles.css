@@ -128,7 +128,7 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 4. INTRO SECTION
 --------------------------------- */
 
-.intro-section{ padding-top: 100px; position: relative; background-size: cover; 
+.intro-section{ padding-top: 120px; position: relative; background-size: cover; 
 	z-index: 1;background-image: url(../../images/slider-1-1920x1080.jpg); }
 
 .intro-section:before{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; 
