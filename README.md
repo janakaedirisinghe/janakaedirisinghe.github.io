@@ -1,2 +1,2 @@
 # janaka-edirisinghe.github.io
-personal website
+<i>personal website</i>
