@@ -200,39 +200,39 @@
         <h2 class="mb-5">Skills</h2>
         <div class="subheading mb-3">Programming Languages & Tools</div>
         <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="HTML5" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-html5"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="CSS" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-css3-alt"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="JavaScript" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-js-square"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="Angular" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-angular"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="React" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-react"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="nodeJs" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-node-js"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="sass" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-sass"></i>
           </li>
     
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="npm" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-npm"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="php" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-deskpro"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="Docker" data-delay='{"show":"100", "hide":""}'>
             <i class="fab fa-docker"></i>
           </li>
               
-          <li class="list-inline-item">
+          <li class="list-inline-item"  data-placement="bottom" data-toggle="tooltip" title="Flutter" data-delay='{"show":"100", "hide":""}'>
             <img width="40px" height="50px" src="images/f/flutter-logo-5086dd11c5-seeklogo.com.png"
               alt="">
           </li>
@@ -395,5 +395,11 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+    </script>
 
 </html>
