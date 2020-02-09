@@ -67,8 +67,18 @@ p.lead {
 }
 
 .social-icons a:hover {
-    background-color: #44ad9f
+    background-color: #44ad9f;
 }
+
+.card-deck  i:hover {
+   color: #44ad9f;
+}
+
+.card-deck  i {
+    margin-right: 5px;
+ }
+
+
 
 .dev-icons {
     font-size: 3rem
