@@ -51,8 +51,8 @@ p.lead {
 
 .social-icons a {
     display: inline-block;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3rem;
+    width: 3rem;
     background-color: #495057;
     color: #fff!important;
     border-radius: 100%;
@@ -87,6 +87,16 @@ p.lead {
 .dev-icons .list-inline-item i:hover {
     color: #44ad9f
 }
+
+/* .dev-icons .list-inline-item .angular:hover {
+    color: red;
+}
+.dev-icons .list-inline-item .node:hover {
+    color:green;
+}
+.dev-icons .list-inline-item .react:hover {
+    color:blue;
+} */
 
 #sideNav .navbar-nav .nav-item .nav-link {
     font-weight: 800;
