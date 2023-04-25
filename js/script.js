@@ -31,6 +31,7 @@ fetch('https://api.github.com/users/janakaedirisinghe')
       document.getElementById("public_gists").innerHTML = data.public_gists+' Gits';
       document.getElementById("followers").innerHTML = data.followers+ ' Followers';
       document.getElementById("public_repos").innerHTML = data.public_repos+ ' Public Repos';
+      document.getElementById("github_avatar").src = data.avatar_url;
   });
   fetch('  https://api.stackexchange.com/2.2/users/10215448?order=desc&sort=reputation&site=stackoverflow')
   .then(response => response.json())
