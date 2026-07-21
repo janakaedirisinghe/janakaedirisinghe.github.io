@@ -10,15 +10,15 @@
         content="janaka edirisinghe, janaka pradeep, janaka , edirisinghe, janaka pradeep edirisinghe, janakaedirisinghe, pradeep edirisinghe,github expert , github campus expert, codezero, software engineer janaka edirisinghe, software engineer kelaniya" />
 
     <!-- Primary Meta Tags -->
-    <title>Janaka edirisinghe | Portfolio</title>
-    <meta name="title" content="Janaka edirisinghe | Portfolio" />
+    <title>Janaka Edirisinghe | Portfolio</title>
+    <meta name="title" content="Janaka Edirisinghe | Portfolio" />
     <meta name="description"
         content="Specializing in building highly scalable, multi-tenant SaaS applications that drive business growth. Let's collaborate and create the next big thing, together! 🚀" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://janakaedirisinghe.com/" />
-    <meta property="og:title" content="Janaka edirisinghe | Portfolio" />
+    <meta property="og:title" content="Janaka Edirisinghe | Portfolio" />
     <meta property="og:description"
         content="Specializing in building highly scalable, multi-tenant SaaS applications that drive business growth. Let's collaborate and create the next big thing, together! 🚀" />
     <meta property="og:image" content="https://janakaedirisinghe.com/u/me.jpeg" />
@@ -26,25 +26,28 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://janakaedirisinghe.com/" />
-    <meta property="twitter:title" content="Janaka edirisinghe | Portfolio" />
+    <meta property="twitter:title" content="Janaka Edirisinghe | Portfolio" />
     <meta property="twitter:description"
         content="Specializing in building highly scalable, multi-tenant SaaS applications that drive business growth. Let's collaborate and create the next big thing, together! 🚀" />
     <meta property="twitter:image" content="https://janakaedirisinghe.com/u/me.jpeg" />
 
-
     <link rel="shortcut icon" href="img/home-favicon2.ico" />
+    
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
-
-    <!-- dev icons -->
-
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <!-- Custom styles -->
+    <link href="css/resume.css" rel="stylesheet">
+
     <!-- Hotjar Tracking Code for Portfolio -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -56,29 +59,20 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-
+    <script>
+        document.documentElement.classList.add('js-enabled');
+    </script>
 </head>
 
 <body id="page-top">
-    <span class="top-right-span">
-        <!-- <button id="switch" onclick="toggleTheme()">Switch</button> -->
-        <span class="theme-switch-wrapper">
-            <label class="theme-switch" for="theme-switcher">
-                <input type="checkbox" id="theme-switcher">
-                <div class="slider round">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </div>
-            </label>
-        </span>
-    </span>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar"></div>
+
+    <!-- Sticky Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Janaka Edirisinghe</span>
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="u/github_avatar.png"
-                    alt="Janaka Edirisinghe">
-            </span>
+            <img class="img-profile-nav" src="u/github_avatar.png" alt="Janaka Edirisinghe">
+            <span>Janaka Edirisinghe</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,9 +89,6 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#education">Education</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#projects">The Dev Lab</a>
                 </li>
@@ -113,791 +104,520 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#research_papers">Research Papers</a>
                 </li>
-
             </ul>
+            <span class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-switcher">
+                    <input type="checkbox" id="theme-switcher">
+                    <div class="slider round">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </label>
+            </span>
         </div>
     </nav>
+
+    <!-- Content Container -->
     <div class="container-fluid p-0">
+        
+        <!-- About Section -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
             <div class="w-100">
-                <h1 class="mb-0">Janaka
-                    <span class="text-primary">Edirisinghe</span>
-                </h1>
-                <div class="subheading mb-5">
-                    <!-- No 127/A, 2nd Canal, Polonnaruwa Sri Lanka ·  -->
-                    (+94)
-                    778422728 ·
-                    <a href="mailto:contact@janakaedirisinghe.com">contact@janakaedirisinghe.com</a>
+                <div class="row align-items-center">
+                    <div class="col-lg-8 order-2 order-lg-1">
+                        <h1 class="mb-2">Janaka <span class="text-primary">Edirisinghe</span></h1>
+                        <div class="subheading mb-4">
+                            <span><i class="fas fa-phone mr-1"></i> (+94) 778422728</span>
+                            <span>·</span>
+                            <span><i class="fas fa-envelope mr-1"></i> <a href="mailto:contact@janakaedirisinghe.com">contact@janakaedirisinghe.com</a></span>
+                        </div>
+                        <p class="lead mb-4">
+                            Specializing in building highly scalable, multi-tenant SaaS applications that drive business growth.
+                            With extensive experience in AWS-powered architectures, I deliver secure, compliant (GDPR, HIPAA,
+                            SOC2) solutions that seamlessly scale to meet complex business needs. Expertise in dynamic tenant
+                            provisioning, resource isolation, and serverless automation ensures efficient, cloud-native systems
+                            that grow with your business.
+                            <br><br>
+                            Let's collaborate and create the next big thing, together! 🚀
+                        </p>
+                        
+                        <!-- Google Calendar Appointment Scheduling begin -->
+                        <div class="mb-4">
+                            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                            <script>
+                                (function () {
+                                    var target = document.currentScript;
+                                    window.addEventListener('load', function () {
+                                        calendar.schedulingButton.load({
+                                            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0gtSCaC9PBl5UqfvSru_ya_wXYcio8D155LPzQWfbH0aBqWs8PVAmMMmPnq3KS7huLUSknqfp5?gv=true',
+                                            color: '#0db49e',
+                                            label: 'Schedule a Call',
+                                            target,
+                                        });
+                                    });
+                                })();
+                            </script>
+                        </div>
+                        <!-- end Google Calendar Appointment Scheduling -->
+
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/janaka-edirisinghe/" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/janakaedirisinghe/" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com/janakapradeep2" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/janaka531" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/janaka_edirisi/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://medium.com/@janakapradeepedirisinghe" target="_blank">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCJbZEcZmQxQzBd7DxA4vAcw" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://stackoverflow.com/users/10215448/janaka-edirisinghe" target="_blank">
+                                <i class="fab fa-stack-overflow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-1 order-lg-2 text-center mb-4 mb-lg-0">
+                        <img class="img-fluid img-profile rounded-circle profile-avatar-main" src="u/github_avatar.png" alt="Janaka Edirisinghe">
+                    </div>
                 </div>
-                <p class="lead mb-5">
-                    <!-- Janaka Edirisinghe is an open-source enthusiast who is holding an honors degree in
-                    software engineering from the University of Kelaniya Sri Lanka.
-                    He was a former core team member for the Facebook Developer Circles Colombo.
-                    He is a passionate and competent engineering professional driven to apply software engineering
-                    skills to
-                    the betterment of lives & an individual who believes that smart work and commitment make more
-                    confidence to deal with dynamic environments so as to add more value to the organization.
-                    Janaka maintains <a href="https://medium.com/@janakapradeepedirisinghe">his blog </a> during his
-                    leisure
-                    time
-                    and also
-                    he never forgets to camping when he has free time. -->
-                    Specializing in building highly scalable, multi-tenant SaaS applications that drive business growth.
-                    With extensive experience in AWS-powered architectures, I deliver secure, compliant (GDPR, HIPAA,
-                    SOC2) solutions that seamlessly scale to meet complex business needs. Expertise in dynamic tenant
-                    provisioning, resource isolation, and serverless automation ensures efficient, cloud-native systems
-                    that grow with your business.
-                    <br><br>
-                    Let's collaborate and create the next big thing, together! 🚀
-                    <br><br>
-
-                    <!-- Google Calendar Appointment Scheduling begin -->
-                    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-                    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                    <script>
-                        (function () {
-                            var target = document.currentScript;
-                            window.addEventListener('load', function () {
-                                calendar.schedulingButton.load({
-                                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0gtSCaC9PBl5UqfvSru_ya_wXYcio8D155LPzQWfbH0aBqWs8PVAmMMmPnq3KS7huLUSknqfp5?gv=true',
-                                    color: '#0db49e',
-                                    label: 'Schedule a Call',
-                                    target,
-                                });
-                            });
-                        })();
-                    </script>
-                    <!-- end Google Calendar Appointment Scheduling -->
-
-                </p>
-
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/janaka-edirisinghe/" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/janakaedirisinghe/" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://twitter.com/janakapradeep2" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.facebook.com/janaka531" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/janaka_edirisi/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-                    <a href="https://medium.com/@janakapradeepedirisinghe" target="_blank">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                    <!-- <a href="https://dribbble.com/#" target="_blank">
-                  <i class="fab fa-dribbble"></i>
-                </a> -->
-                    <a href="https://www.youtube.com/channel/UCJbZEcZmQxQzBd7DxA4vAcw" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://stackoverflow.com/users/10215448/janaka-edirisinghe" target="_blank">
-                        <i class="fab fa-stack-overflow"></i>
-                    </a>
-                </div>
-
             </div>
         </section>
-        <hr class="m-0">
+
+        <!-- Experience Section -->
         <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
             <div class="w-100">
                 <h2 class="mb-5">Experience</h2>
-                <!-- <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Senior Software Engineer</h3>
-                        <div class="subheading mb-3">GateAI Limited</div>
-                        <p>GateAI is an AI platform that helps professionals make faster, more accurate decisions by
-                            turning complex data into clear insights. It uses secure, private AI models and includes
-                            human oversight to ensure trustworthy results. GateAI offers features like personalized
-                            knowledge graphs, automated document creation, and tools for tax research. As the first
-                            technical hire, I developed the initial product and its core architecture to support these
-                            capabilities.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">November 2023 - Present</div>
+                        <div class="timeline-title">Head of Solution Architecture</div>
+                        <div class="timeline-subtitle">10Qbit (pvt) ltd</div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">&nbsp;</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">May 2022 - November 2023</div>
+                        <div class="timeline-title">Technical Lead</div>
+                        <div class="timeline-subtitle">10Qbit (pvt) ltd</div>
                     </div>
-                </div> -->
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Head of Solution Architecture</h3>
-                        <div class="subheading mb-3">10Qbit (pvt) ltd</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2021 - May 2022</div>
+                        <div class="timeline-title">Senior Software Engineer</div>
+                        <div class="timeline-subtitle">10Qbit (pvt) ltd</div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">&nbsp;</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">September 2020 - June 2021</div>
+                        <div class="timeline-title">Software Engineer</div>
+                        <div class="timeline-subtitle">10Qbit (pvt) ltd</div>
+                        <p>10Qbit is a team of professionally resonant tech-specialists converging excellence, experience, and expertise to build products that stand the test of time and the turbulences of the market.</p>
                     </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Technical Lead</h3>
-                        <div class="subheading mb-3">10Qbit (pvt) ltd</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">November 2020 - Present</div>
+                        <div class="timeline-title">Software Engineer & Team Lead</div>
+                        <div class="timeline-subtitle">parallax technologies (pvt) ltd</div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">&nbsp;</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">November 2020 - Present</div>
+                        <div class="timeline-title">Associate Software Engineer & Team Lead</div>
+                        <div class="timeline-subtitle">parallax technologies (pvt) ltd</div>
                     </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Senior Software Engineer</h3>
-                        <div class="subheading mb-3">10Qbit (pvt) ltd</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">September 2020 - Present</div>
+                        <div class="timeline-title">Head of Technical Team - storemate&#8482;</div>
+                        <div class="timeline-subtitle">parallax technologies (pvt) ltd</div>
+                        <p>StoreMate&#8482; is the most affordable POS System for small & medium businesses in Sri Lanka. Currently, StoreMate&#8482; has 200+ customers around the country.</p>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">&nbsp;</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2020 - October 2020</div>
+                        <div class="timeline-title">Trainee Software Engineer</div>
+                        <div class="timeline-subtitle">parallax technologies (pvt) ltd</div>
+                        <p>Parallax Technologies (Pvt) Ltd extended its services since its advent in 2011 to offer world class software development solutions, software outsourcing & offshore. Today, Parallax boasts a strong team of IT engineers working with micro to macro scale industrialists locally and internationally.</p>
                     </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">software Engineer</h3>
-                        <div class="subheading mb-3">10Qbit (pvt) ltd</div>
-                        <p>10Qbit is a team of professionally resonant tech-specialists converging excellence,
-                            experience, and expertise.
-                            The confluence works to build products that stand the test of time, and the turbulences of
-                            the market.</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">&nbsp;</span>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">software Engineer & Team Lead</h3>
-                        <div class="subheading mb-3">parallax technologies (pvt) ltd</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">&nbsp;</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2018 - Present</div>
+                        <div class="timeline-title">Founder</div>
+                        <div class="timeline-subtitle">EXTRO-LAB Inc.</div>
+                        <p>Extro Lab is a Web, Standalone Enterprise Resource Planning (ERP) app development team offering custom applications for businesses. A team of experienced people who are passionate about new technologies and integrate them to provide optimal enterprise solutions.</p>
                     </div>
                 </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">associate software Engineer & Team Lead</h3>
-                        <div class="subheading mb-3">parallax technologies (pvt) ltd</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <!-- <span class="text-primary">November 2020 - Present</span> -->
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Head of Technical Team - storemate&#8482;</h3>
-                        <div class="subheading mb-3">parallax technologies (pvt) ltd</div>
-                        StoreMate&#8482; is the most affordable POS System for small & medium businesses in Sri Lanka.
-                        Currently, StoreMate&#8482; has 200+ customers around the country.
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <!-- <span class="text-primary">september 2020 - Present</span> -->
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">trainee software Engineer</h3>
-                        <div class="subheading mb-3">parallax technologies (pvt) ltd</div>
-                        <p>Established as a privately owned company with the focus on software development and IT
-                            services,
-                            Parallax Technologies (Pvt) Ltd extended its list of services since its advent in 2011 to
-                            offer
-                            world class software development solutions, software outsourcing & offshore. Today we’re
-                            proud
-                            to boast a strong team of IT engineers to work with micro to macro scale industrialists
-                            locally
-                            and internationally.so we are the one of best software development company in sri Lanka.</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <!-- <span class="text-primary">June 2020 - October 2020</span> -->
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Founder</h3>
-                        <div class="subheading mb-3">EXTRO-LAB Inc.</div>
-                        <p>Extro Lab is a Web, Standalone Enterprise Resource Planing (ERP) app development team
-                            offering
-                            custom
-                            applications for businesses. A Team of experienced people who are passionate about new
-                            technologies and
-                            integrate them to provide optimal enterprise solutions.</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <!-- <span class="text-primary">June 2018 - Present</span> -->
-                    </div>
-                </div>
-                <!-- <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Freelancer</h3>
-                
-                    <p></p>
-                </div>
-                <div class="resume-date text-md-right">
-            
-                </div>
-            </div> -->
             </div>
         </section>
-        <hr class="m-0">
+
+        <!-- Education Section -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
             <div class="w-100">
                 <h2 class="mb-5">Education</h2>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">University of Kelaniya</h3>
-                        <div class="subheading mb-3">BSc(Hons)in Software Engineering
-                        </div>
-                        <!-- <div>Computer Science</div> -->
-                        <!-- <p>GPA: 3.49</p> -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">January 2016 - December 2019</div>
+                        <div class="timeline-title">University of Kelaniya</div>
+                        <div class="timeline-subtitle">BSc(Hons) in Software Engineering</div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <!-- <span class="text-primary">January 2016 - December 2019</span> -->
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Royal College Polonnaruwa</h3>
-                        <div class="subheading mb-3">Combined Mathematics</div>
-                        <small>Advanced Level</small> |
-                        <small>District Rank: 3</small>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <!-- <span class="text-primary">January 2002 - August 2015</span> -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">January 2002 - August 2015</div>
+                        <div class="timeline-title">Royal College Polonnaruwa</div>
+                        <div class="timeline-subtitle">Combined Mathematics (Advanced Level)</div>
+                        <p>District Rank: 3</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <hr class="m-0">
-        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-            <div class="w-100">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Languages & Frameworks & Tools</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="HTML5"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-html5"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="CSS"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-css3-alt"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="JavaScript"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-js-square"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="Angular"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-angular angular"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="React"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-react react"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="VueJs"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-vuejs"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="Laravel"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-laravel"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="nodeJs"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-node-js node"></i>
-                    </li>
-                </ul>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="sass"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-sass"></i>
-                    </li>
 
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="npm"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-npm"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="php"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-deskpro"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="Docker"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-docker"></i>
-                    </li>
-                    <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="aws"
-                        data-delay='{"show":"100", "hide":""}'>
-                        <i class="fab fa-aws"></i>
-                    </li>
-                    <div class="janaka" style="display: inline-block;">
-
-                        <li class="list-inline-item" data-placement="bottom" data-toggle="tooltip" title="Flutter"
-                            data-delay='{"show":"100", "hide":""}'>
-                            <img width="40px" height="50px" src="images/f/flutter-logo-5086dd11c5-seeklogo.com.png"
-                                alt="">
-                        </li>
-                    </div>
-                </ul>
-                <div class="subheading mb-3">Workflow</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Mobile-First, Responsive Design
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Cross Browser Testing & Debugging
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Cross Functional Teams
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Agile Development & Scrum
-                    </li>
-                </ul>
-            </div>
-        </section> -->
-        <hr class="m-0">
-        <section class="resume-section p-3 p-lg-5 d-flex " id="projects">
+        <!-- Projects / The Dev Lab Section -->
+        <section class="resume-section p-3 p-lg-5 d-flex" id="projects">
             <div class="w-100">
                 <h2 class="mb-5">Built for Developers</h2>
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="u/9.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">data-clip</h5>
-                            <p class="card-text">
-                                Easily collect and manage form submissions without the hassle of a backend. Dataclip
-                                acts as your server, so you can focus on building, not hosting. 🚀
-                                <!-- <a target="_blank" href="http://dataclip.ml/">visit</a> -->
-                                <br>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <img src="u/9.jpg" class="project-card-img" alt="data-clip">
+                        <div class="project-card-body">
+                            <h5 class="project-card-title">data-clip</h5>
+                            <p class="project-card-text">
+                                Easily collect and manage form submissions without the hassle of a backend. Dataclip acts as your server, so you can focus on building, not hosting. 🚀
                             </p>
-                            <p class="card-text">
-                                <i class="fab fa-node fa-lg"></i>
-                                <i class="fab fa-angular fa-lg"></i>
-                                <i class="fas fa-fire fa-lg"></i>
-                                <i class="fab fa-aws fa-lg"></i>
-                                <i class="fab fa-slack fa-lg"></i>
-                            </p>
-                            <p class="card-text"><small class="text-muted">Induvidual</small></p>
+                            <div class="project-card-tech">
+                                <span class="tech-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="tech-badge"><i class="fab fa-angular"></i> Angular</span>
+                                <span class="tech-badge"><i class="fas fa-fire"></i> Firebase</span>
+                                <span class="tech-badge"><i class="fab fa-aws"></i> AWS</span>
+                                <span class="tech-badge"><i class="fab fa-slack"></i> Slack</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <span class="text-muted"><i class="fas fa-user mr-1"></i> Individual</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="u/5.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">easy_App</h5>
-                            <p class="card-text">
-                                End-to-end backend server for frontend and mobile developers. 🚀 <br>
-                                ( <small>Simple Backend Server for your [Vue / Angular / React / iOS / Android / Flutter
-                                    ]
-                                    Frontend
-                                    App.</small> )
-                            </p>
-                            <p class="card-text">
-                                <i class="fab fa-node fa-lg"></i>
-                                <i class="fab fa-php fa-lg"></i>
-                                <i class="fas fa-fire fa-lg"></i>
-                            </p>
-                            <p class="card-text"><small class="text-muted">Ongoing</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="u/10.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Webhook Tester</h5>
-                            <p class="card-text">
-                                Test and monitor webhooks in real-time with this interactive webhook tester. Instantly
-                                capture, log, and analyze webhook events for seamless debugging and integration. 🚀
-                                <a target="_blank" href="https://webhook.janakaedirisinghe.com/">visit</a>
-                                <br>
-                            </p>
-                            <p class="card-text">
-                                <i class="fab fa-node-js fa-lg"></i>
-                                <i class="fab fa-vuejs fa-lg"></i>
-                                <i class="fas fa-fire fa-lg"></i>
-                                <i class="fab fa-aws fa-lg"></i>
-                            </p>
-                            <!-- <p class="card-text"><small class="text-muted">Induvidual</small></p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="card-deck mt-4">
-                    <div class="card">
-                        <img src="u/11.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">JWT Debugger</h5>
-                            <p class="card-text">
-                                Instantly decode, verify, and debug JWT tokens with this interactive tool. Analyze
-                                claims, headers, and signatures for seamless authentication debugging. 🚀
-                                <a target="_blank" href="https://janakaedirisinghe.com/jwt-debugger/">visit</a>
-                                <br>
-                            </p>
-                            <p class="card-text">
-                                <i class="fab fa-vuejs fa-lg"></i>
-                                <i class="fab fa-aws fa-lg"></i>
-                            </p>
-                            <!-- <p class="card-text"><small class="text-muted">Induvidual</small></p> -->
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="u/12.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Invoice Generator</h5>
-                            <p class="card-text">
-                                Create professional invoices instantly with this easy-to-use invoice generator.
-                                Customize details, download as PDF, and share—no login needed. Perfect for freelancers
-                                and businesses alike. 🧾
-                                <a target="_blank" href="https://janakaedirisinghe.com/invoice-generator/">visit</a>
-                                <br>
-                            </p>
-                            <p class="card-text">
-                                <i class="fab fa-vuejs fa-lg"></i>
-                                <i class="fab fa-aws fa-lg"></i>
-                            </p>
-                            <!-- <p class="card-text"><small class="text-muted">Induvidual</small></p> -->
-                        </div>
-                    </div>
-                    <div class="card hidden">
 
+                    <div class="project-card">
+                        <img src="u/5.jpg" class="project-card-img" alt="easy_App">
+                        <div class="project-card-body">
+                            <h5 class="project-card-title">easy_App</h5>
+                            <p class="project-card-text">
+                                End-to-end backend server for frontend and mobile developers. Simple backend server for your Vue, Angular, React, iOS, Android, or Flutter frontend application. 🚀
+                            </p>
+                            <div class="project-card-tech">
+                                <span class="tech-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="tech-badge"><i class="fab fa-php"></i> PHP</span>
+                                <span class="tech-badge"><i class="fas fa-fire"></i> Firebase</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <span class="text-muted"><i class="fas fa-spinner mr-1"></i> Ongoing</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="project-card">
+                        <img src="u/10.png" class="project-card-img" alt="Webhook Tester">
+                        <div class="project-card-body">
+                            <h5 class="project-card-title">Webhook Tester</h5>
+                            <p class="project-card-text">
+                                Test and monitor webhooks in real-time with this interactive webhook tester. Instantly capture, log, and analyze webhook events for seamless debugging and integration. 🚀
+                            </p>
+                            <div class="project-card-tech">
+                                <span class="tech-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="tech-badge"><i class="fab fa-vuejs"></i> Vue.js</span>
+                                <span class="tech-badge"><i class="fas fa-fire"></i> Firebase</span>
+                                <span class="tech-badge"><i class="fab fa-aws"></i> AWS</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <a class="font-weight-bold text-primary" href="https://webhook.janakaedirisinghe.com/" target="_blank">Visit Site <i class="fas fa-external-link-alt ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="u/11.png" class="project-card-img" alt="JWT Debugger">
+                        <div class="project-card-body">
+                            <h5 class="project-card-title">JWT Debugger</h5>
+                            <p class="project-card-text">
+                                Instantly decode, verify, and debug JWT tokens with this interactive tool. Analyze claims, headers, and signatures for seamless authentication debugging. 🚀
+                            </p>
+                            <div class="project-card-tech">
+                                <span class="tech-badge"><i class="fab fa-vuejs"></i> Vue.js</span>
+                                <span class="tech-badge"><i class="fab fa-aws"></i> AWS</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <a class="font-weight-bold text-primary" href="https://janakaedirisinghe.com/jwt-debugger/" target="_blank">Visit Site <i class="fas fa-external-link-alt ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="u/12.png" class="project-card-img" alt="Invoice Generator">
+                        <div class="project-card-body">
+                            <h5 class="project-card-title">Invoice Generator</h5>
+                            <p class="project-card-text">
+                                Create professional invoices instantly. Customize details, download as PDF, and share—no login needed. Perfect for freelancers and businesses alike. 🧾
+                            </p>
+                            <div class="project-card-tech">
+                                <span class="tech-badge"><i class="fab fa-vuejs"></i> Vue.js</span>
+                                <span class="tech-badge"><i class="fab fa-aws"></i> AWS</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <a class="font-weight-bold text-primary" href="https://janakaedirisinghe.com/invoice-generator/" target="_blank">Visit Site <i class="fas fa-external-link-alt ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
-        <hr class="m-0">
+
+        <!-- Published Packages Section -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="packages">
             <div class="w-100">
                 <h2 class="mb-5">Published Packages</h2>
-                <div class="card-deck">
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-npm-original-wordmark colored"></i>
+                <div class="packages-grid">
+                    
+                    <div class="npm-card">
+                        <div class="npm-card-icon">
+                            <i class="fab fa-npm"></i>
+                        </div>
+                        <div class="npm-card-content">
+                            <h5 class="npm-card-title">Dataclip client</h5>
+                            <div class="npm-card-subtitle">v2.0.0</div>
+                            <p class="npm-card-desc">The official Node.js API client for Dataclip.</p>
+                            <div class="npm-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> May 2021</small>
+                                <a class="text-primary font-weight-bold" href="https://www.npmjs.com/package/dataclip" target="_blank">View <i class="fas fa-external-link-alt ml-1"></i></a>
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Dataclip client</h5>
-                                    <p>v 2.0.0</p>
-                                    <p class="card-text">
-                                        The official node.js API client for Dataclip. <br>
+                        </div>
+                    </div>
 
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">May 2021
-                                            <a class="ml-4 text-success" href="https://www.npmjs.com/package/dataclip"
-                                                target="_blank">view</a></small>
-                                    </p>
-                                </div>
+                    <div class="npm-card">
+                        <div class="npm-card-icon">
+                            <i class="fab fa-npm"></i>
+                        </div>
+                        <div class="npm-card-content">
+                            <h5 class="npm-card-title">VU READ MORE</h5>
+                            <div class="npm-card-subtitle">v1.0.3</div>
+                            <p class="npm-card-desc">A simple & customizable read more component/plugin for Vue applications.</p>
+                            <div class="npm-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> April 2023</small>
+                                <a class="text-primary font-weight-bold" href="https://www.npmjs.com/package/vureadmore" target="_blank">View <i class="fas fa-external-link-alt ml-1"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-npm-original-wordmark colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">VU READ MORE</h5>
-                                    <p>v 1.0.3</p>
-                                    <p class="card-text">
-                                        A simple & customizable read more component/plugin for your vue applications.
-                                        <br>
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">April 2023
-                                            <a class="ml-4 text-success" href="https://www.npmjs.com/package/vureadmore"
-                                                target="_blank">view</a></small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-deck">
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-npm-original-wordmark colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Vue Tooltip</h5>
-                                    <p>v 1.0.3</p>
-                                    <p class="card-text">
-                                        A simple & customizable tooltip component/plugin for your vue applications.
-                                    <br>
 
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">Dec 2025
-                                            <a class="ml-4 text-success" href="https://www.npmjs.com/package/vutooltip"
-                                                target="_blank">view</a></small>
-                                    </p>
-                                </div>
+                    <div class="npm-card">
+                        <div class="npm-card-icon">
+                            <i class="fab fa-npm"></i>
+                        </div>
+                        <div class="npm-card-content">
+                            <h5 class="npm-card-title">Vue Tooltip</h5>
+                            <div class="npm-card-subtitle">v1.0.3</div>
+                            <p class="npm-card-desc">A simple & customizable tooltip component/plugin for Vue applications.</p>
+                            <div class="npm-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> Dec 2025</small>
+                                <a class="text-primary font-weight-bold" href="https://www.npmjs.com/package/vutooltip" target="_blank">View <i class="fas fa-external-link-alt ml-1"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class=" mb-3 w-50">
-                        
-                    </div>
+
                 </div>
             </div>
         </section>
-        <hr class="m-0">
+
+        <!-- Certifications & Achievements Section -->
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
             <div class="w-100">
                 <h2 class="mb-5">Certifications & Courses</h2>
-                <div class="card-deck">
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-mongodb-plain-wordmark colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">MongoDB Basics</h5>
-                                    <p>university.mongodb.com</p>
-                                    <p class="card-text">
-                                        Issued by MongoDB University <br>
-
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">May 12, 2020 <a
-                                                class="ml-4 text-success" href="">verify</a></small>
-                                    </p>
-                                </div>
+                <div class="certs-grid">
+                    
+                    <div class="cert-card">
+                        <div class="cert-card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="cert-card-content">
+                            <h5 class="cert-card-title">MongoDB Basics</h5>
+                            <div class="cert-card-subtitle">university.mongodb.com</div>
+                            <p class="cert-card-desc">Issued by MongoDB University</p>
+                            <div class="cert-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> May 12, 2020</small>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-mongodb-plain-wordmark colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cluster Administration</h5>
-                                    <p>university.mongodb.com</p>
-                                    <p class="card-text">
-                                        Issued by MongoDB University <br>
 
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">May 30, 2020<a
-                                                class="ml-4 text-success" href="">verify</a></small>
-                                    </p>
-                                </div>
+                    <div class="cert-card">
+                        <div class="cert-card-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="cert-card-content">
+                            <h5 class="cert-card-title">Cluster Administration</h5>
+                            <div class="cert-card-subtitle">university.mongodb.com</div>
+                            <p class="cert-card-desc">Issued by MongoDB University</p>
+                            <div class="cert-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> May 30, 2020</small>
                             </div>
                         </div>
                     </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="cert-card-content">
+                            <h5 class="cert-card-title">The MongoDB Aggregation Framework</h5>
+                            <div class="cert-card-subtitle">university.mongodb.com</div>
+                            <p class="cert-card-desc">Issued by MongoDB University</p>
+                            <div class="cert-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> June 05, 2020</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="cert-card-content">
+                            <h5 class="cert-card-title">AWS Startups badge</h5>
+                            <div class="cert-card-subtitle">awseducate.instructure.com</div>
+                            <p class="cert-card-desc">Issued by AWS Education</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="cert-card-content">
+                            <h5 class="cert-card-title">Flutter Development Using Dart</h5>
+                            <div class="cert-card-subtitle">appbrewery.co</div>
+                            <p class="cert-card-desc">Issued by The App Brewery</p>
+                            <div class="cert-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> May 20, 2020</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-icon">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <div class="cert-card-content">
+                            <h5 class="cert-card-title">Angular: The Big Picture</h5>
+                            <div class="cert-card-subtitle">pluralsight.com</div>
+                            <p class="cert-card-desc">Jim Cooper | Joe Eames</p>
+                            <div class="cert-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> March 05, 2020</small>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="card-deck">
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-mongodb-plain-wordmark colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">The MongoDB Aggregation Framework</h5>
-                                    <p>university.mongodb.com</p>
-                                    <p class="card-text">
-                                        Issued by MongoDB University <br>
+            </div>
+        </section>
 
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">June 05, 2020 <a
-                                                class="ml-4 text-success" href="">verify</a></small></p>
-                                </div>
+        <!-- Stats Section -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="stats">
+            <div class="w-100">
+                <h2 class="mb-5">Stats</h2>
+                <div class="stats-grid">
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="padding: 0; overflow: hidden; background: none;">
+                            <img id="github_avatar" src="" alt="GitHub" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius-sm);">
+                        </div>
+                        <div class="stat-card-content">
+                            <h5 class="stat-card-title">GitHub</h5>
+                            <div class="stat-card-number" id="public_repos"><span class="skeleton-pulse"></span></div>
+                            <div class="mt-2 text-muted" style="font-size: 0.85rem;">
+                                <span><i class="fas fa-code mr-1"></i> <span id="public_gists"><span class="skeleton-pulse" style="width: 40px; height: 1.1rem;"></span></span></span>
+                                <span class="mx-2">|</span>
+                                <span><i class="fas fa-users mr-1"></i> <span id="followers"><span class="skeleton-pulse" style="width: 40px; height: 1.1rem;"></span></span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;"
-                                    class="devicon-amazonwebservices-plain-wordmark colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">AWS Startups badge</h5>
-                                    <p>awseducate.instructure.com</p>
-                                    <p class="card-text">
-                                        Issued by AWS Education<br>
-                                    </p>
-                                    <p class="card-text"><a class="small text-success" href="">verify</a></p>
-                                </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fab fa-stack-overflow"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <h5 class="stat-card-title">Stack Overflow</h5>
+                            <div class="stat-card-number" id="reputation"><span class="skeleton-pulse"></span></div>
+                            <div class="mt-2 text-muted" style="font-size: 0.85rem;">
+                                <span><i class="fas fa-arrow-up mr-1" style="color: #6CEC1E;"></i> <span id="reputation_change_year"><span class="skeleton-pulse" style="width: 40px; height: 1.1rem;"></span></span> this year</span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fab fa-medium-m"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <h5 class="stat-card-title">Medium</h5>
+                            <div class="stat-card-number">6 Articles</div>
+                            <div class="mt-2 text-muted" style="font-size: 0.85rem;">
+                                <span>Articles on development topics</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="card-deck">
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-android-plain colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Flutter Development Using Dart</h5>
-                                    <p>appbrewery.co</p>
-                                    <p class="card-text">
-                                        Issued by The App Brewery <br>
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">May 20, 2020 <a
-                                                class="ml-4 text-success" href="">verify</a></small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+        </section>
+
+        <!-- Research Papers Section -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research_papers">
+            <div class="w-100">
+                <h2 class="mb-5">Research Papers</h2>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <i class="fas fa-file-contract"></i>
                     </div>
-                    <div class="card mb-3 w-50">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <i style="font-size: 100px;" class="devicon-angularjs-plain colored"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Angular: The Big Picture</h5>
-                                    <p>pluralsight.com</p>
-                                    <p class="card-text">
-                                        Jim Cooper | Joe Eames<br>
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">March 05, 2020 </small></p>
-                                </div>
-                            </div>
+                    <div class="research-card-content">
+                        <h5 class="research-card-title">PoS Based Decentralized App</h5>
+                        <p class="research-card-desc">
+                            This research compares Proof-of-Stake with Proof-of-Work & Proof-of-Authority for cost-efficient e-voting systems, focusing on gas consumption & throughput execution.
+                        </p>
+                        <div class="research-card-footer d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> 2020</small>
+                            <!-- <a class="text-primary font-weight-bold" href="#" target="_blank">View Paper</a> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <hr class="m-0">
-        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="stats">
-            <div class="w-100">
-                <h2 class="mb-5">Stats</h2>
-                <div class="card-deck">
-                    <div class="card mb-3 w-50 shadow">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <!-- <i style="font-size: 100px;" class="devicon-github-plain-wordmark colored"></i> -->
-                                <img id="github_avatar" src="" alt="" width="100px">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">GitHub</h5>
-                                    <p id="public_repos"></p>
-                                    <!-- <p class="card-text">
-                                  Issued by The App Brewery <br>
-                                </p> -->
-                                    <p class="card-text">
-                                        <img src="https://icongr.am/fontawesome/github-alt.svg?size=20&color=898989"
-                                            alt=""><small class="ml-3" id="public_gists"></small> |
-                                        <img class="ml-3"
-                                            src="https://icongr.am/fontawesome/users.svg?size=20&color=898989"
-                                            alt=""><small class="ml-3" id="followers"></small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 w-50 shadow">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <img src="https://icongr.am/fontawesome/stack-overflow.svg?size=100&color=FF5733"
-                                    alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Stackoverflow</h5>
-                                    <p id="reputation"></p>
-                                    <img src="https://icongr.am/fontawesome/arrow-up.svg?size=10&color=6CEC1E"
-                                        alt=""><span id="reputation_change_year"></span>
-                                    <!-- <p class="card-text">
-                                  Jim Cooper | Joe Eames<br>
-                                </p>
-                                <p class="card-text"><small class="text-muted">March 05, 2020 </small></p> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-deck">
-                    <div class="card mb-3 w-50 shadow">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 p-5">
-                                <img src="https://icongr.am/fontawesome/medium.svg?size=100&color=6CEC1E" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Medium</h5>
-                                    <p>6 Articles</p>
-                                    <!-- <p class="card-text">
-                                  Issued by The App Brewery <br>
-                                </p> -->
-                                    <!-- <p class="card-text">
-                                  <img src="https://icongr.am/fontawesome/github-alt.svg?size=20&color=898989" alt=""><small class="ml-3">8 Gits</small> |
-                                  <img class="ml-3" src="https://icongr.am/fontawesome/users.svg?size=20&color=898989" alt=""><small class="ml-3">46 Followers</small>
-                                </p> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 w-50 border-0">
-
-                    </div>
-                </div>
-            </div>
-    </div>
-    </div>
-    </div>
-    </section>
-
-    <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research_papers">
-        <div class="w-50">
-            <h2 class="mb-5">Research Papers</h2>
-            <div class="card-deck">
-                <div class="card mb-3 w-50">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 p-5">
-                            <i style="font-size: 100px;" class="devicon-consul-original"></i>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">PoS Based Decentralized App</h5>
-                                <p class="card-text">
-                                    Research compares Proof-of-Stake with <br>
-                                    Proof-of-Work & Proof-of-Authority for <br>
-                                    cost-efficient e-voting systems, <br>
-                                    focusing on gas consumption & throughput.
-                                </p>
-                                <p class="card-text"><small class="text-muted">2020
-                                        <a class="ml-4 text-success" href="#" target="_blank">view</a></small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- <hr class="m-0">
-<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-    <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-    </div>
-</section> -->
-
 
     </div>
+
+    <!-- Scripts -->
     <script src="./js/script.js"></script>
-    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+    <script src="js/resume.js"></script>
 
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+</body>
 
 </html>
