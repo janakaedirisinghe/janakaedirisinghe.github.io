@@ -159,7 +159,13 @@
                         <div class="subheading mb-4">
                             <span><i class="fas fa-phone mr-1"></i> (+94) 778422728</span>
                             <span>·</span>
-                            <span><i class="fas fa-envelope mr-1"></i> <a href="mailto:contact@janakaedirisinghe.com">contact@janakaedirisinghe.com</a></span>
+                            <span class="email-container">
+                                <i class="fas fa-envelope mr-1"></i> 
+                                <a href="mailto:contact@janakaedirisinghe.com" id="email-text">contact@janakaedirisinghe.com</a>
+                                <button class="copy-btn" onclick="copyEmailToClipboard(event)" data-toggle="tooltip" title="Copy to Clipboard">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </span>
                         </div>
                         <p class="lead mb-4">
                             Specializing in building highly scalable, multi-tenant SaaS applications that drive business growth.
@@ -308,7 +314,7 @@
                         <div class="timeline-date">January 2002 - August 2015</div>
                         <div class="timeline-title">Royal College Polonnaruwa</div>
                         <div class="timeline-subtitle">Combined Mathematics (Advanced Level)</div>
-                        <p>District Rank: 3</p>
+                        <p>DR: 3</p>
                     </div>
                 </div>
             </div>

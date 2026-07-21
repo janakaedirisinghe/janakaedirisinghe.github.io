@@ -371,13 +371,6 @@ section.resume-section:last-of-type {
 }
 
 .timeline-date {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-#experience .timeline-date {
     display: none;
 }
 
@@ -417,7 +410,7 @@ section.resume-section:last-of-type {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 12px 24px var(--accent-glow);
     border-color: var(--primary);
 }
 
@@ -426,6 +419,11 @@ section.resume-section:last-of-type {
     width: 100%;
     object-fit: cover;
     border-bottom: 1px solid var(--border-color);
+    transition: var(--transition) !important;
+}
+
+.project-card:hover .project-card-img {
+    transform: scale(1.04);
 }
 
 .project-card-body {
@@ -490,27 +488,34 @@ section.resume-section:last-of-type {
     box-shadow: var(--shadow-sm);
     padding: 1.5rem;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
     transition: var(--transition);
 }
 
 .npm-card:hover, .cert-card:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
     border-color: var(--primary);
 }
 
 .npm-card-icon, .cert-card-icon {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--primary);
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--bg-body);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
 }
 
 .npm-card-content, .cert-card-content {
     flex: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .npm-card-footer, .cert-card-footer {
@@ -519,6 +524,8 @@ section.resume-section:last-of-type {
     align-items: center;
     margin-top: auto;
     width: 100%;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .npm-card-footer a, .cert-card-footer a {
@@ -526,9 +533,9 @@ section.resume-section:last-of-type {
 }
 
 .npm-card-title, .cert-card-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
     color: var(--text-main);
 }
 
@@ -536,11 +543,11 @@ section.resume-section:last-of-type {
     font-size: 0.85rem;
     color: var(--primary);
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .npm-card-desc, .cert-card-desc {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     margin-bottom: 0.75rem;
 }
@@ -797,4 +804,34 @@ section.resume-section:last-of-type {
         transform: translateX(100%);
     }
 }
+
+/* Copy email button */
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    margin-left: 0.25rem;
+    padding: 0.25rem;
+    font-size: 0.875rem;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.copy-btn:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.copy-btn:focus {
+    outline: none;
+}
+
+/* Card hover glow enhancements */
+.npm-card:hover, .cert-card:hover, .stat-card:hover, .research-card:hover {
+    box-shadow: 0 8px 16px var(--accent-glow) !important;
+}
+
 

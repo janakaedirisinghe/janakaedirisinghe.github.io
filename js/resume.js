@@ -62,4 +62,20 @@
     $('.timeline-item, .project-card, .npm-card, .cert-card, .stat-card, .research-card').addClass('revealed');
   }
 
+  // Copy email logic
+  window.copyEmailToClipboard = function(e) {
+    e.preventDefault();
+    var email = "contact@janakaedirisinghe.com";
+    navigator.clipboard.writeText(email).then(function() {
+      var btn = $('.copy-btn');
+      var originalTitle = btn.attr('data-original-title') || 'Copy to Clipboard';
+      btn.attr('data-original-title', 'Copied! ✓').tooltip('show');
+      setTimeout(function() {
+        btn.attr('data-original-title', originalTitle).tooltip('handleHide');
+      }, 2000);
+    }).catch(function(err) {
+      console.error('Failed to copy: ', err);
+    });
+  };
+
 })(jQuery);

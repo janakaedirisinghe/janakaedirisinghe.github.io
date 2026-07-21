@@ -17,7 +17,8 @@ function toggleTheme() {
 
 // Immediately invoked function to set the theme on initial load
 (function () {
-    if (localStorage.getItem('theme') === 'theme-dark') {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'theme-dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         setTheme('theme-dark');
     } else {
         setTheme('theme-light');
@@ -48,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeSwitcher = document.getElementById('theme-switcher');
 
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'theme-dark') {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'theme-dark' || (!savedTheme && prefersDark)) {
         setTheme('theme-dark');
         themeSwitcher.checked = true;
     } else {
