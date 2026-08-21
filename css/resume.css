@@ -618,6 +618,48 @@ section.resume-section:last-of-type {
     color: var(--text-muted);
 }
 
+/* GitHub Contribution Card */
+.github-contribution-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.github-contribution-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.github-chart-container {
+    overflow-x: auto;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    border-radius: var(--border-radius-sm);
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.github-chart-img {
+    min-width: 680px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.theme-dark .github-chart-container {
+    background: rgba(17, 24, 39, 0.7);
+}
+
+.theme-dark .github-chart-img {
+    filter: brightness(0.95) contrast(1.1);
+}
+
+.github-contribution-footer {
+    border-top: 1px solid var(--border-color);
+}
+
 /* Research Paper Section */
 .research-card {
     background-color: var(--bg-card);

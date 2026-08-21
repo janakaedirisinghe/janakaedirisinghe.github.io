@@ -26,27 +26,45 @@ function toggleTheme() {
 })();
 
 fetch('https://api.github.com/users/janakaedirisinghe')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('GitHub API error');
+        return response.json();
+    })
     .then(data => {
-        //   console.log(data);
-        document.getElementById("public_gists").innerHTML = data.public_gists + ' Gits';
-        document.getElementById("followers").innerHTML = data.followers + ' Followers';
-        document.getElementById("public_repos").innerHTML = data.public_repos + ' Public Repos';
-        document.getElementById("github_avatar").src = data.avatar_url;
+        const gistsEl = document.getElementById("public_gists");
+        const followersEl = document.getElementById("followers");
+        const reposEl = document.getElementById("public_repos");
+        const avatarEl = document.getElementById("github_avatar");
+
+        if (gistsEl) gistsEl.innerHTML = (data.public_gists ?? 0) + ' Gists';
+        if (followersEl) followersEl.innerHTML = (data.followers ?? 0) + ' Followers';
+        if (reposEl) reposEl.innerHTML = (data.public_repos ?? 0) + ' Public Repos';
+        if (avatarEl && data.avatar_url) avatarEl.src = data.avatar_url;
+    })
+    .catch(err => {
+        console.warn('Could not fetch GitHub user info:', err);
     });
-fetch('  https://api.stackexchange.com/2.2/users/10215448?order=desc&sort=reputation&site=stackoverflow')
-    .then(response => response.json())
+
+fetch('https://api.stackexchange.com/2.2/users/10215448?order=desc&sort=reputation&site=stackoverflow')
+    .then(response => {
+        if (!response.ok) throw new Error('StackOverflow API error');
+        return response.json();
+    })
     .then(data => {
-        //   console.log(data.items[0]);
-        document.getElementById("reputation_change_year").innerHTML = data.items[0].reputation_change_year + ' This year';
-
-        document.getElementById("reputation").innerHTML = data.items[0].reputation + ' Reputation';
+        if (data.items && data.items.length > 0) {
+            const repChangeEl = document.getElementById("reputation_change_year");
+            const repEl = document.getElementById("reputation");
+            if (repChangeEl) repChangeEl.innerHTML = (data.items[0].reputation_change_year ?? 0) + ' This year';
+            if (repEl) repEl.innerHTML = (data.items[0].reputation ?? 0) + ' Reputation';
+        }
+    })
+    .catch(err => {
+        console.warn('Could not fetch StackOverflow info:', err);
     });
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const themeSwitcher = document.getElementById('theme-switcher');
+    if (!themeSwitcher) return;
 
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -67,7 +85,3 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('theme', this.checked ? 'theme-dark' : 'theme-light');
     });
 });
-
-
-
-Resources

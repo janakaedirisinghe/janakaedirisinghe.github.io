@@ -37,7 +37,7 @@
 
   // Intersection Observer for scroll reveal animations
   if ('IntersectionObserver' in window) {
-    var revealElements = $('.timeline-item, .project-card, .npm-card, .cert-card, .stat-card, .research-card');
+    var revealElements = $('.timeline-item, .project-card, .npm-card, .cert-card, .stat-card, .github-contribution-card, .research-card');
     
     // Add the visual class programmatically
     revealElements.addClass('reveal-on-scroll');
@@ -59,7 +59,7 @@
     });
   } else {
     // Fallback if IntersectionObserver is not supported
-    $('.timeline-item, .project-card, .npm-card, .cert-card, .stat-card, .research-card').addClass('revealed');
+    $('.timeline-item, .project-card, .npm-card, .cert-card, .stat-card, .github-contribution-card, .research-card').addClass('revealed');
   }
 
   // Copy email logic
