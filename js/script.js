@@ -115,6 +115,16 @@ fetch('https://api.stackexchange.com/2.2/users/10215448?order=desc&sort=reputati
         console.warn('Could not fetch StackOverflow info:', err);
     });
 
+// Track page visit via CounterAPI v2
+fetch('https://api.counterapi.dev/v2/janaka-edirisinghes-team-5388/janaka-edirisinghe/up', {
+    method: 'GET',
+    headers: {
+        'Authorization': 'Bearer ut_5K0vp7fUlQdsASmZ94aCzEG4nQEMdjG3QVVf1Mqb'
+    }
+}).catch(err => {
+    console.debug('Visitor tracking error:', err);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     // Register static stats (e.g. Medium)
     registerOrAnimateStat("medium_articles", 6, ' Articles');
