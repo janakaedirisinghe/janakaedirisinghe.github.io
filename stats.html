@@ -478,11 +478,14 @@
             <div class="card-header">
                 <div class="card-title">
                     <i class="fa-regular fa-clock"></i>
-                    <span>Hourly Activity (UTC)</span>
+                    <span>Hourly Activity (IST &bull; Sri Lanka Time)</span>
                 </div>
+                <span class="status-pill" style="background: rgba(13, 180, 158, 0.15); color: var(--primary);">
+                    <span>UTC +05:30</span>
+                </span>
             </div>
             <div class="hourly-grid" id="hourlyGrid">
-                <!-- Dynamically generated 24h boxes -->
+                <!-- Dynamically generated 24h boxes in IST -->
             </div>
         </div>
 
@@ -493,7 +496,7 @@
                 <span id="lastUpdatedText">Last updated: just now</span>
             </div>
             <div>
-                <span>Private Telemetry &bull; Powered by CounterAPI v2</span>
+                <span>Timezone: <strong>IST (Asia/Colombo)</strong> &bull; Powered by CounterAPI v2</span>
             </div>
         </div>
     </div>
@@ -536,7 +539,7 @@
                 if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
                 const json = await res.json();
                 renderDashboard(json.data);
-                document.getElementById('lastUpdatedText').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+                document.getElementById('lastUpdatedText').textContent = `Last updated: ${new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Colombo' })} (IST)`;
             } catch (err) {
                 console.error('Failed to load stats:', err);
                 alert('Could not fetch latest statistics: ' + err.message);
@@ -582,18 +585,30 @@
                 weekdayBarsContainer.appendChild(col);
             });
 
-            // Hourly Grid (00 to 23)
+            // Hourly Grid in IST (Sri Lanka Time: UTC + 5:30)
+            // Chronologically ordered from 00:30 IST to 23:30 IST
             const hoursData = data.stats?.temporal?.hours || {};
             const hourlyGrid = document.getElementById('hourlyGrid');
             hourlyGrid.innerHTML = '';
 
-            for (let i = 0; i < 24; i++) {
-                const hourKey = String(i).padStart(2, '0');
-                const count = hoursData[hourKey]?.up || 0;
+            // 24 slots corresponding to IST day (0 to 23 hours in IST)
+            for (let istHour = 0; istHour < 24; istHour++) {
+                // UTC hour corresponding to istHour:30 is (istHour - 5.5 + 24) % 24 = (istHour - 5 - 1 (since 30min pushes it back into previous UTC hour))
+                // Specifically: 05:30 IST = 00:00 UTC -> utcHour = 0
+                // 00:30 IST = 19:00 UTC (previous day) -> utcHour = 19
+                const utcHour = (istHour - 5 + 24 - 1) % 24;
+                const utcKey = String(utcHour).padStart(2, '0');
+                const count = hoursData[utcKey]?.up || 0;
+
+                const istHourStr = String(istHour).padStart(2, '0');
+                const period = istHour >= 12 ? 'PM' : 'AM';
+                const display12 = (istHour % 12 === 0 ? 12 : istHour % 12) + ':30 ' + period;
+
                 const box = document.createElement('div');
                 box.className = `hour-box ${count > 0 ? 'has-traffic' : ''}`;
+                box.title = `${display12} IST (${istHourStr}:30 - ${String((istHour+1)%24).padStart(2,'0')}:30 IST)\nUTC: ${utcKey}:00 - ${String((utcHour+1)%24).padStart(2,'0')}:00\nVisits: ${count}`;
                 box.innerHTML = `
-                    <div class="hour-time">${hourKey}:00</div>
+                    <div class="hour-time">${istHourStr}:30</div>
                     <div class="hour-count">${count}</div>
                 `;
                 hourlyGrid.appendChild(box);
