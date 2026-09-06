@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /admin/
 Disallow: /login/
+Disallow: /stats.html
+Disallow: /stats
 Allow: /

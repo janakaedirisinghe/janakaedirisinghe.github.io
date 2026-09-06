@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Visitor Analytics Dashboard | Janaka Edirisinghe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --primary: #0db49e;
+            --primary-hover: #0a9381;
+            --primary-light: rgba(13, 180, 158, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .theme-light {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-card-alt: #f1f5f9;
+            --border: rgba(226, 232, 240, 0.9);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            --bar-bg: #e2e8f0;
+        }
+
+        .theme-dark {
+            --bg-body: #090d16;
+            --bg-card: #111827;
+            --bg-card-alt: #1a2333;
+            --border: rgba(31, 41, 55, 0.8);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.4);
+            --bar-bg: #1f293d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        /* Top Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-title .icon-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+        }
+
+        .header-title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .header-title p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-main);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            color: #ffffff;
+        }
+
+        /* KPI Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), #3b82f6);
+            opacity: 0.8;
+        }
+
+        .kpi-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .kpi-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .kpi-icon {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .kpi-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.1;
+        }
+
+        .kpi-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+        }
+
+        /* Section Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.75rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title i {
+            color: var(--primary);
+        }
+
+        /* Chart / Bars */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.75rem;
+            align-items: flex-end;
+            height: 200px;
+            padding-top: 1rem;
+        }
+
+        .bar-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+
+        .bar-wrap {
+            width: 100%;
+            max-width: 48px;
+            height: 140px;
+            background: var(--bar-bg);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            width: 100%;
+            background: linear-gradient(180deg, var(--primary) 0%, #0a9381 100%);
+            border-radius: var(--radius-sm);
+            transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 4px;
+        }
+
+        .bar-val {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .bar-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: capitalize;
+        }
+
+        /* Hourly Heatmap / Timeline */
+        .hourly-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+            gap: 0.6rem;
+        }
+
+        .hour-box {
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.6rem 0.4rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .hour-box.has-traffic {
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .hour-time {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-bottom: 0.2rem;
+        }
+
+        .hour-count {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .hour-box.has-traffic .hour-count {
+            color: var(--primary);
+        }
+
+        /* Status & Meta Info */
+        .meta-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.3); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Loading Skeleton */
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        @media (max-width: 600px) {
+            .chart-grid {
+                height: 160px;
+                gap: 0.35rem;
+            }
+            .bar-wrap {
+                max-width: 32px;
+                height: 100px;
+            }
+            .bar-label {
+                font-size: 0.68rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Nav / Header -->
+        <header class="header">
+            <div class="header-title">
+                <div class="icon-badge">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div>
+                    <h1>Visitor Analytics</h1>
+                    <p>Live portfolio telemetry & visit patterns</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="themeToggleBtn" class="btn" title="Toggle Theme">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+                <button id="refreshBtn" class="btn btn-primary">
+                    <i class="fa-solid fa-arrows-rotate" id="refreshIcon"></i>
+                    <span>Refresh</span>
+                </button>
+                <a href="index.html" class="btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Portfolio</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- KPI Summary Cards -->
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-title">Total Visits</span>
+                    <i class="fa-solid fa-users kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiTotal">—</div>
+                <div class="kpi-sub">All-time portfolio page views</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-title">Visits Today</span>
+                    <i class="fa-solid fa-calendar-day kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiToday">—</div>
+                <div class="kpi-sub">Recorded since midnight UTC</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-title">This Week</span>
+                    <i class="fa-solid fa-calendar-week kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiWeek">—</div>
+                <div class="kpi-sub">Current 7-day rolling window</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-title">Quarter (Q3)</span>
+                    <i class="fa-solid fa-chart-line kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiQuarter">—</div>
+                <div class="kpi-sub">Quarterly aggregated count</div>
+            </div>
+        </div>
+
+        <!-- Weekly Distribution Breakdown -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Weekly Traffic Distribution</span>
+                </div>
+                <span class="status-pill">
+                    <span class="status-dot"></span>
+                    <span>Live Telemetry</span>
+                </span>
+            </div>
+            <div class="chart-grid" id="weekdayBars">
+                <!-- Dynamically generated bars -->
+            </div>
+        </div>
+
+        <!-- Hourly 24-Hour Timeline -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Hourly Activity (UTC)</span>
+                </div>
+            </div>
+            <div class="hourly-grid" id="hourlyGrid">
+                <!-- Dynamically generated 24h boxes -->
+            </div>
+        </div>
+
+        <!-- Meta Footer -->
+        <div class="meta-footer">
+            <div>
+                <span>Telemetry ID: <code>janaka-edirisinghe</code></span> &bull; 
+                <span id="lastUpdatedText">Last updated: just now</span>
+            </div>
+            <div>
+                <span>Private Telemetry &bull; Powered by CounterAPI v2</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_KEY = 'ut_5K0vp7fUlQdsASmZ94aCzEG4nQEMdjG3QVVf1Mqb';
+        const STATS_URL = `https://api.counterapi.dev/v2/janaka-edirisinghes-team-5388/janaka-edirisinghe/stats?api_key=${API_KEY}`;
+
+        // Theme management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'theme-dark' : 'theme-light');
+            document.documentElement.className = savedTheme;
+            updateThemeIcon(savedTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('themeIcon');
+            if (icon) {
+                icon.className = theme === 'theme-dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            }
+        }
+
+        document.getElementById('themeToggleBtn').addEventListener('click', () => {
+            const current = document.documentElement.className;
+            const next = current === 'theme-dark' ? 'theme-light' : 'theme-dark';
+            document.documentElement.className = next;
+            localStorage.setItem('theme', next);
+            updateThemeIcon(next);
+        });
+
+        // Data fetching & rendering
+        async function fetchStats() {
+            const refreshBtn = document.getElementById('refreshBtn');
+            const refreshIcon = document.getElementById('refreshIcon');
+            refreshIcon.classList.add('fa-spin');
+            refreshBtn.classList.add('loading');
+
+            try {
+                const res = await fetch(STATS_URL);
+                if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+                const json = await res.json();
+                renderDashboard(json.data);
+                document.getElementById('lastUpdatedText').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+            } catch (err) {
+                console.error('Failed to load stats:', err);
+                alert('Could not fetch latest statistics: ' + err.message);
+            } finally {
+                refreshIcon.classList.remove('fa-spin');
+                refreshBtn.classList.remove('loading');
+            }
+        }
+
+        function renderDashboard(data) {
+            // KPIs
+            document.getElementById('kpiTotal').textContent = (data.up_count || 0).toLocaleString();
+            document.getElementById('kpiToday').textContent = (data.stats?.today?.up || 0).toLocaleString();
+            document.getElementById('kpiWeek').textContent = (data.stats?.this_week?.up || 0).toLocaleString();
+            document.getElementById('kpiQuarter').textContent = (data.stats?.temporal?.quarters?.q3?.up || 0).toLocaleString();
+
+            // Weekdays Bar Chart
+            const weekdaysOrder = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+            const weekdaysData = data.stats?.temporal?.weekdays || {};
+            
+            let maxDayVal = 1;
+            weekdaysOrder.forEach(day => {
+                const count = weekdaysData[day]?.up || 0;
+                if (count > maxDayVal) maxDayVal = count;
+            });
+
+            const weekdayBarsContainer = document.getElementById('weekdayBars');
+            weekdayBarsContainer.innerHTML = '';
+
+            weekdaysOrder.forEach(day => {
+                const count = weekdaysData[day]?.up || 0;
+                const percentage = Math.max(Math.round((count / maxDayVal) * 100), count > 0 ? 8 : 2);
+
+                const col = document.createElement('div');
+                col.className = 'bar-col';
+                col.innerHTML = `
+                    <div class="bar-val">${count}</div>
+                    <div class="bar-wrap" title="${day}: ${count} visits">
+                        <div class="bar-fill" style="height: ${percentage}%"></div>
+                    </div>
+                    <div class="bar-label">${day.substring(0, 3)}</div>
+                `;
+                weekdayBarsContainer.appendChild(col);
+            });
+
+            // Hourly Grid (00 to 23)
+            const hoursData = data.stats?.temporal?.hours || {};
+            const hourlyGrid = document.getElementById('hourlyGrid');
+            hourlyGrid.innerHTML = '';
+
+            for (let i = 0; i < 24; i++) {
+                const hourKey = String(i).padStart(2, '0');
+                const count = hoursData[hourKey]?.up || 0;
+                const box = document.createElement('div');
+                box.className = `hour-box ${count > 0 ? 'has-traffic' : ''}`;
+                box.innerHTML = `
+                    <div class="hour-time">${hourKey}:00</div>
+                    <div class="hour-count">${count}</div>
+                `;
+                hourlyGrid.appendChild(box);
+            }
+        }
+
+        // Initialize on load
+        initTheme();
+        fetchStats();
+
+        // Refresh on button click
+        document.getElementById('refreshBtn').addEventListener('click', fetchStats);
+
+        // Auto-refresh every 60s
+        setInterval(fetchStats, 60000);
+    </script>
+</body>
+</html>
