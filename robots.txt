@@ -4,3 +4,5 @@ Disallow: /login/
 Disallow: /stats.html
 Disallow: /stats
 Allow: /
+
+Sitemap: https://janakaedirisinghe.com/sitemap.xml
