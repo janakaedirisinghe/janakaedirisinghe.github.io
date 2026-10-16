@@ -1,0 +1,20 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE & Editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+
+# Archives & Compressed files
+*.rar
+*.zip
+*.tar.gz
+
+# Logs and databases
+*.log
