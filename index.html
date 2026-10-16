@@ -127,13 +127,13 @@
                     <a class="nav-link js-scroll-trigger" href="#packages">Published Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#awards">Achievements</a>
+                    <a class="nav-link js-scroll-trigger" href="#research_papers">Research Papers</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#stats">Stats</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#research_papers">Research Papers</a>
+                    <a class="nav-link js-scroll-trigger" href="#awards">Achievements</a>
                 </li>
             </ul>
             <span class="theme-switch-wrapper">
@@ -548,6 +548,132 @@
                         </div>
                     </div>
 
+                    <div class="npm-card">
+                        <div class="npm-card-icon">
+                            <i class="fab fa-npm"></i>
+                        </div>
+                        <div class="npm-card-content">
+                            <h5 class="npm-card-title">Vue Network Status</h5>
+                            <div class="npm-card-subtitle">v1.1.0</div>
+                            <p class="npm-card-desc">A lightweight, reactive network connectivity and offline monitor banner for Vue 3.</p>
+                            <div class="npm-card-footer d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> Oct 2026</small>
+                                <a class="text-primary font-weight-bold" href="https://www.npmjs.com/package/vue-network-status"
+                                    target="_blank">View <i class="fas fa-external-link-alt ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Papers Section -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research_papers">
+            <div class="w-100">
+                <h2 class="mb-5">Research Papers</h2>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="research-card-content">
+                        <h5 class="research-card-title">PoS Based Decentralized App</h5>
+                        <p class="research-card-desc">
+                            This research compares Proof-of-Stake with Proof-of-Work & Proof-of-Authority for
+                            cost-efficient e-voting systems, focusing on gas consumption & throughput execution.
+                        </p>
+                        <div class="research-card-footer d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> 2020</small>
+                            <!-- <a class="text-primary font-weight-bold" href="#" target="_blank">View Paper</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="stats">
+            <div class="w-100">
+                <h2 class="mb-5">Stats</h2>
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="padding: 0; overflow: hidden; background: none;">
+                            <img id="github_avatar" src="" alt="GitHub"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius-sm);">
+                        </div>
+                        <div class="stat-card-content">
+                            <h5 class="stat-card-title">GitHub</h5>
+                            <div class="stat-card-number" id="public_repos"><span class="skeleton-pulse"></span></div>
+                            <div class="stat-card-footer">
+                                <span><i class="fas fa-code mr-1"></i> <span id="public_gists"><span
+                                            class="skeleton-pulse"
+                                            style="width: 40px; height: 1.1rem;"></span></span></span>
+                                <span><i class="fas fa-users mr-1"></i> <span id="followers"><span
+                                            class="skeleton-pulse"
+                                            style="width: 40px; height: 1.1rem;"></span></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fab fa-stack-overflow"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <h5 class="stat-card-title">Stack Overflow</h5>
+                            <div class="stat-card-number" id="reputation"><span class="skeleton-pulse"></span></div>
+                            <div class="stat-card-footer">
+                                <span><i class="fas fa-arrow-up mr-1" style="color: #6CEC1E;"></i> <span
+                                        id="reputation_change_year"><span class="skeleton-pulse"
+                                            style="width: 40px; height: 1.1rem;"></span></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fab fa-medium-m"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <h5 class="stat-card-title">Medium</h5>
+                            <div class="stat-card-number" id="medium_articles"><span class="skeleton-pulse"></span>
+                            </div>
+                            <div class="stat-card-footer">
+                                <span>Articles on development topics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GitHub Contribution Activity Graph Card -->
+                <div class="github-contribution-card mt-4">
+                    <div class="github-contribution-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex align-items-center" style="gap: 0.75rem;">
+                            <i class="fab fa-github" style="font-size: 1.5rem; color: var(--primary);"></i>
+                            <div>
+                                <h5 class="mb-0 font-weight-bold" style="color: var(--text-main); font-size: 1.1rem;">
+                                    GitHub Contribution Activity</h5>
+                                <small class="text-muted">Public contributions & open-source commit history</small>
+                            </div>
+                        </div>
+                        <a href="https://github.com/janakaedirisinghe" target="_blank"
+                            class="text-primary font-weight-bold" style="font-size: 0.9rem;">
+                            @janakaedirisinghe <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                    <div class="github-chart-container">
+                        <img src="https://ghchart.rshah.org/0db49e/janakaedirisinghe"
+                            alt="Janaka Edirisinghe's GitHub Contribution Chart" class="img-fluid github-chart-img"
+                            loading="lazy" />
+                    </div>
+                    <div class="github-contribution-footer d-flex justify-content-between align-items-center mt-3 pt-2">
+                        <span class="text-muted" style="font-size: 0.85rem;"><i class="fas fa-circle text-success mr-1"
+                                style="font-size: 0.55rem;"></i> Live open-source contributions</span>
+                        <span class="text-muted" style="font-size: 0.85rem;"><i class="fas fa-sync-alt mr-1"></i> Synced
+                            with GitHub</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -640,116 +766,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="stats">
-            <div class="w-100">
-                <h2 class="mb-5">Stats</h2>
-                <div class="stats-grid">
-
-                    <div class="stat-card">
-                        <div class="stat-card-icon" style="padding: 0; overflow: hidden; background: none;">
-                            <img id="github_avatar" src="" alt="GitHub"
-                                style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius-sm);">
-                        </div>
-                        <div class="stat-card-content">
-                            <h5 class="stat-card-title">GitHub</h5>
-                            <div class="stat-card-number" id="public_repos"><span class="skeleton-pulse"></span></div>
-                            <div class="stat-card-footer">
-                                <span><i class="fas fa-code mr-1"></i> <span id="public_gists"><span
-                                            class="skeleton-pulse"
-                                            style="width: 40px; height: 1.1rem;"></span></span></span>
-                                <span><i class="fas fa-users mr-1"></i> <span id="followers"><span
-                                            class="skeleton-pulse"
-                                            style="width: 40px; height: 1.1rem;"></span></span></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-card-icon">
-                            <i class="fab fa-stack-overflow"></i>
-                        </div>
-                        <div class="stat-card-content">
-                            <h5 class="stat-card-title">Stack Overflow</h5>
-                            <div class="stat-card-number" id="reputation"><span class="skeleton-pulse"></span></div>
-                            <div class="stat-card-footer">
-                                <span><i class="fas fa-arrow-up mr-1" style="color: #6CEC1E;"></i> <span
-                                        id="reputation_change_year"><span class="skeleton-pulse"
-                                            style="width: 40px; height: 1.1rem;"></span></span></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-card-icon">
-                            <i class="fab fa-medium-m"></i>
-                        </div>
-                        <div class="stat-card-content">
-                            <h5 class="stat-card-title">Medium</h5>
-                            <div class="stat-card-number" id="medium_articles"><span class="skeleton-pulse"></span>
-                            </div>
-                            <div class="stat-card-footer">
-                                <span>Articles on development topics</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- GitHub Contribution Activity Graph Card -->
-                <div class="github-contribution-card mt-4">
-                    <div class="github-contribution-header d-flex justify-content-between align-items-center mb-3">
-                        <div class="d-flex align-items-center" style="gap: 0.75rem;">
-                            <i class="fab fa-github" style="font-size: 1.5rem; color: var(--primary);"></i>
-                            <div>
-                                <h5 class="mb-0 font-weight-bold" style="color: var(--text-main); font-size: 1.1rem;">
-                                    GitHub Contribution Activity</h5>
-                                <small class="text-muted">Public contributions & open-source commit history</small>
-                            </div>
-                        </div>
-                        <a href="https://github.com/janakaedirisinghe" target="_blank"
-                            class="text-primary font-weight-bold" style="font-size: 0.9rem;">
-                            @janakaedirisinghe <i class="fas fa-external-link-alt ml-1"></i>
-                        </a>
-                    </div>
-                    <div class="github-chart-container">
-                        <img src="https://ghchart.rshah.org/0db49e/janakaedirisinghe"
-                            alt="Janaka Edirisinghe's GitHub Contribution Chart" class="img-fluid github-chart-img"
-                            loading="lazy" />
-                    </div>
-                    <div class="github-contribution-footer d-flex justify-content-between align-items-center mt-3 pt-2">
-                        <span class="text-muted" style="font-size: 0.85rem;"><i class="fas fa-circle text-success mr-1"
-                                style="font-size: 0.55rem;"></i> Live open-source contributions</span>
-                        <span class="text-muted" style="font-size: 0.85rem;"><i class="fas fa-sync-alt mr-1"></i> Synced
-                            with GitHub</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Papers Section -->
-        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research_papers">
-            <div class="w-100">
-                <h2 class="mb-5">Research Papers</h2>
-                <div class="research-card">
-                    <div class="research-card-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <div class="research-card-content">
-                        <h5 class="research-card-title">PoS Based Decentralized App</h5>
-                        <p class="research-card-desc">
-                            This research compares Proof-of-Stake with Proof-of-Work & Proof-of-Authority for
-                            cost-efficient e-voting systems, focusing on gas consumption & throughput execution.
-                        </p>
-                        <div class="research-card-footer d-flex justify-content-between align-items-center">
-                            <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i> 2020</small>
-                            <!-- <a class="text-primary font-weight-bold" href="#" target="_blank">View Paper</a> -->
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
