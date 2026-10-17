@@ -115,15 +115,61 @@ fetch('https://api.stackexchange.com/2.2/users/10215448?order=desc&sort=reputati
         console.warn('Could not fetch StackOverflow info:', err);
     });
 
+// Fetch NPM Stats (both for each package card and total stats)
+const npmPackages = ['vue-network-status', 'vutooltip', 'vureadmore', 'dataclip'];
+Promise.allSettled(
+    npmPackages.map(pkg =>
+        fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg}`)
+            .then(res => res.ok ? res.json() : null)
+            .catch(() => null)
+    )
+).then(results => {
+    let totalMonthlyDownloads = 0;
+    results.forEach((r, idx) => {
+        const pkg = npmPackages[idx];
+        const cardDlEl = document.getElementById(`npm_dl_${pkg}`);
+
+        if (r.status === 'fulfilled' && r.value && typeof r.value.downloads === 'number') {
+            const downloads = r.value.downloads;
+            totalMonthlyDownloads += downloads;
+            if (cardDlEl) {
+                cardDlEl.innerHTML = `<i class="fas fa-download mr-1"></i> ${downloads.toLocaleString()} / mo`;
+                cardDlEl.classList.remove('is-new');
+            }
+        } else {
+            // Package is new or stats not yet compiled by npm
+            if (cardDlEl && pkg === 'vue-network-status') {
+                cardDlEl.innerHTML = `<i class="fas fa-sparkles mr-1"></i> New`;
+                cardDlEl.classList.add('is-new');
+            }
+        }
+    });
+
+    const el = document.getElementById("npm_downloads");
+    if (totalMonthlyDownloads > 0) {
+        registerOrAnimateStat("npm_downloads", totalMonthlyDownloads, ' / month');
+        if (el && !statsState.inView) {
+            el.textContent = `${totalMonthlyDownloads.toLocaleString()} / month`;
+        }
+    } else {
+        if (el) el.textContent = 'Active on npm';
+    }
+}).catch(err => {
+    console.debug('Could not fetch npm downloads:', err);
+    const el = document.getElementById("npm_downloads");
+    if (el) el.textContent = 'Active on npm';
+});
+
 // Track page visit via CounterAPI v2 (Query param avoids CORS preflight)
 fetch('https://api.counterapi.dev/v2/janaka-edirisinghes-team-5388/janaka-edirisinghe/up?api_key=ut_5K0vp7fUlQdsASmZ94aCzEG4nQEMdjG3QVVf1Mqb')
     .catch(err => {
         console.debug('Visitor tracking error:', err);
     });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Register static stats (e.g. Medium)
+function initStatsAndTheme() {
+    // Register static stats (e.g. Medium, NPM packages)
     registerOrAnimateStat("medium_articles", 6, ' Articles');
+    registerOrAnimateStat("npm_packages", 4, ' Packages');
 
     // Theme Switcher
     const themeSwitcher = document.getElementById('theme-switcher');
@@ -158,11 +204,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.05, rootMargin: '50px' });
 
         observer.observe(statsSection);
     } else {
         // Fallback if observer not supported
         runStatsAnimations();
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStatsAndTheme);
+} else {
+    initStatsAndTheme();
+}

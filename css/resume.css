@@ -552,6 +552,25 @@ section.resume-section:last-of-type {
     margin-bottom: 0.75rem;
 }
 
+.npm-downloads-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--border-radius-full);
+    background-color: var(--badge-bg);
+    color: var(--primary);
+    border: 1px solid var(--border-color);
+    letter-spacing: 0.01em;
+}
+
+.npm-downloads-tag.is-new {
+    background-color: rgba(40, 167, 69, 0.12);
+    color: #28a745;
+    border-color: rgba(40, 167, 69, 0.28);
+}
+
 /* Stats Cards */
 .stats-grid {
     display: grid;
